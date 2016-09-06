@@ -1,0 +1,50 @@
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+$navmenu-width: 60px;
+
+.e2menu {
+  background: $navbar-default-bg;
+  border-right: 1px solid $navbar-default-border;
+  position: fixed;
+  top: $navbar-height;
+  left: 0;
+  bottom: 0;
+  width: $navmenu-width;
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      display: block;
+    }
+  }
+}
+
+.e2submenu {
+  background: $navbar-default-bg;
+  border-right: 1px solid $navbar-default-border;
+  position: fixed;
+  top: $navbar-height;
+  left: $navmenu-width;
+  bottom: 0;
+  width: 240px;
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      display: block;
+    }
+  }
+}
+
+.e2container  {
+  padding: 20px;
+  position: fixed;
+  top: $navbar-height;
+  left: $navmenu-width;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+
+  .e2submenu + .container {
+    padding-left: 260px;
+  }
+}
